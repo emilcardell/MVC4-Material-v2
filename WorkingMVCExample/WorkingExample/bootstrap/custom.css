@@ -1,0 +1,71 @@
+.price-holder .price
+{
+	font-weight: bold;
+	float: left;
+	margin-top: 6px;
+}
+
+.price-holder
+{
+	overflow: hidden;
+}
+
+.price-holder a
+{
+	float: right;
+}
+
+.thumbnail
+{
+	margin-bottom: 20px;
+}
+
+.label a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.label a:hover
+{
+	color: #ddd;
+}
+
+.product-header-wrapper
+{
+	overflow: hidden;
+}
+
+.product-header-wrapper .price
+{
+	float: left;
+	font-weight: bold;
+	margin-top: 27px;
+	margin-left: 10px;
+}
+
+.product-header-wrapper h1
+{
+	float: left;
+}
+
+.product-header-wrapper a
+{
+	float: right;
+	margin-top: 18px;
+}
+
+div.thumbnail-big
+{
+	margin-bottom: 5px;
+}
+
+.login-wrapper
+{
+	margin: 30px;
+}
+
+footer
+{
+	margin-left: 20px;
+}

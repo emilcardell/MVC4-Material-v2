@@ -1,0 +1,22 @@
+﻿@model WorkingExample.Models.Product
+
+            <div class="span4">
+              <div class="thumbnail">
+                  <img src="@Html.Raw(Model.UrlToSmallImage)" alt="">
+                  <div class="caption">
+                    <h3>@Html.ActionLink(string.IsNullOrEmpty(Model.Name) ? "Produkt Fel" : Model.Name, "Display", "Product", new { productId = Model.Id }, new { Class=""})</h3>
+                      
+                      @Html.Partial("_TagLinks", Model.Tags)
+                      
+                      <p> 
+                      <div class="price-holder">
+                          <span class="price">@Model.Price kr</span> 
+                          
+                           @Html.ActionLink("Edit »", "Edit", "Product", new { productId = Model.Id }, new { Class = "btn"})
+                      </div>
+                    </p>
+                  </div>
+                </div>
+            </div><!--/span-->
+           
+

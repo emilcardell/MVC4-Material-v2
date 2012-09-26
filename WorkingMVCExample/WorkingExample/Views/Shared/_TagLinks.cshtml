@@ -1,0 +1,7 @@
+﻿@model List<string>
+@foreach(var tag in Model)
+{
+    <span class="label label-info">
+        @Html.ActionLink(tag, "ByTag", "Home", new { tagName = tag }, new {})
+    </span> 
+}

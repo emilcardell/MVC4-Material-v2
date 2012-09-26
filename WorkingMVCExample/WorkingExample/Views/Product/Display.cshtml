@@ -1,0 +1,15 @@
+﻿@model WorkingExample.Models.Product
+        <div class="span4">
+            <div class="product-header-wrapper">
+              <h1>@Model.Name</h1>
+                <div class="price">
+                    @Model.Price kr
+                </div>
+                @Html.ActionLink("Edit »", "Edit", "Product",new { productId = Model.Id }, new { Class = "btn"})
+             
+            </div>
+            <div class="thumbnail thumbnail-big">
+                <img src="@Html.Raw(Model.UrlToLargeImage)" />
+            </div>
+            @Html.Partial("_TagLinks", Model.Tags)
+        </div>

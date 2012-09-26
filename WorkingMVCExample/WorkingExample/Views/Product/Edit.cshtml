@@ -1,0 +1,65 @@
+﻿@model WorkingExample.Controllers.ProductInputModel
+
+            <h1>Create/Edit product</h1>
+          
+            <div class="row-fluid">
+           
+                <div class="span12">
+
+                    @using (Html.BeginForm("Save", "Product", new { productId = Model.ProductId }, FormMethod.Post))
+                    {
+
+                        <div class="control-group error">
+                            <label class="control-label" for="inputName">Product name</label>
+                            <div class="controls">
+                                @Html.TextBoxFor(x => x.Name, new {placeholder = "Prodct name"})
+                                @Html.ValidationMessageFor(x => x.Name, "Name is requred", new { Class = "help-inline"})
+                            </div>
+                        </div>
+                        <div class="control-group error">
+                            <label class="control-label" for="inputPrice">Price</label>
+                            <div class="controls">
+                                @Html.TextBoxFor(x => x.Price, new {placeholder = "Price"})
+                                @Html.ValidationMessageFor(x => x.Price, "Price is requred", new { Class = "help-inline"})
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="inputAddTag">Tag #1</label>
+                            <div class="controls">
+                                @Html.TextBoxFor(x => x.Tag1, new {placeholder = "Tag #1"})
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="inputAddTag">Tag #2</label>
+                            <div class="controls">
+                                @Html.TextBoxFor(x => x.Tag2, new {placeholder = "Tag #2"})
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="inputAddTag">Tag #3</label>
+                            <div class="controls">
+                                @Html.TextBoxFor(x => x.Tag3, new {placeholder = "Tag #3"})
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="inputPassword">Choose image</label>
+                            <div class="controls">
+                                @Html.DropDownListFor(x => x.ImageId, new List<string>() { "1", "2", "3", "4", "5" }.Select(y => new SelectListItem(){ Text = y, Value = y}))
+
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success">Save</button>             
+                        </div>
+
+                    }
+
+
+
+                </div><!--/span-->
+            </div><!--/row-->

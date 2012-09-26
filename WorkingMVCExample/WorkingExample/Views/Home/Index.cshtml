@@ -1,0 +1,25 @@
+﻿@model List<WorkingExample.Models.Product>
+
+@if (ViewBag.tagName == null)
+{
+    <h1>Alla produkter</h1>
+}
+else
+{
+    <h1>Produkter taggade med @ViewBag.tagName</h1>
+}
+
+          
+<div class="row-fluid">
+    @for(int i = 0; i < Model.Count; i++) {
+
+        if ((i % 3) == 0 && i != 0)
+        {
+            @Html.Raw("</div>")
+            @Html.Raw("<div class=\"row-fluid\">")
+        }
+        
+         @Html.Partial("_ProductListItem", Model[i])
+        
+    }
+</div>
